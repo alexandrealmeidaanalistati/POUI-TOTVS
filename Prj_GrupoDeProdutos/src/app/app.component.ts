@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
+import { ProtheusLibCoreModule } from '@totvs/protheus-lib-core';
 
 import {
   PoMenuItem,
@@ -19,8 +20,9 @@ import {
     PoToolbarModule,
     PoMenuModule,
     PoPageModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    ProtheusLibCoreModule,
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
