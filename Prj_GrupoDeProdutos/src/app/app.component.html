@@ -1,9 +1,16 @@
 <div class="po-wrapper">
-  <po-toolbar p-title="AppName"></po-toolbar>
 
-  <po-menu [p-menus]="menus"></po-menu>
-
-  <po-page-default p-title="AppName">
-    <p> AppName page </p>
-  </po-page-default>
+  <po-toolbar p-title="Projeto Teste"></po-toolbar>
+  <po-menu
+    [p-collapsed]="false"
+    [p-filter]="true"
+    [p-menus]="menus"
+    [p-automatic-toggle]="false"
+  >
+    <div *p-menu-header-template class="po-p-2 po-font-title">
+      <p>Curso <b>PO UI</b></p>
+    </div>
+  </po-menu>
 </div>
+
+
