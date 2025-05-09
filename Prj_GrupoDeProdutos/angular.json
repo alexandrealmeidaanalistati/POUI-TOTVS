@@ -27,9 +27,7 @@
               }
             ],
             "styles": [
-              "./node_modules/@totvs/po-theme/css/po-theme-default-variables.min.css",
-              "./node_modules/@totvs/po-theme/css/po-theme-default.min.css",
-              "./node_modules/@po-ui/style/css/po-theme-core.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -87,17 +85,12 @@
               }
             ],
             "styles": [
-              "./node_modules/@totvs/po-theme/css/po-theme-default-variables.min.css",
-              "./node_modules/@totvs/po-theme/css/po-theme-default.min.css",
-              "./node_modules/@po-ui/style/css/po-theme-core.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "f444a8fa-844e-433e-a555-1f51cdbc8015"
   }
 }
