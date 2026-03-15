@@ -1,0 +1,104 @@
+<po-page-default [p-title]="pageTitle" [p-actions]="pageActions">
+
+  <po-table
+    [p-columns]="columns"
+    [p-items]="itens"
+    p-sort="true"
+    p-striped="true"
+    [p-actions]="[
+      { label: 'Editar', action: editarAlimento.bind(this), icon: 'po-icon-edit' },
+      { label: 'Excluir', action: excluirAlimento.bind(this), icon: 'po-icon-delete', type: 'danger' }
+    ]"
+  >
+  </po-table>
+
+</po-page-default>
+
+<po-modal
+  #modalNutricao
+  [p-title]="getModalTitle()"
+  [p-primary-action]="confirmAction"
+  [p-secondary-action]="cancelAction"
+  p-size="lg"
+>
+  <form [formGroup]="form">
+    <div class="po-row">
+      <po-input
+        class="po-md-8"
+        p-label="Alimento"
+        formControlName="alimento"
+        p-required="true"
+        p-placeholder="Nome do alimento"
+      >
+      </po-input>
+
+      <po-select
+        class="po-md-4"
+        p-label="Categoria"
+        formControlName="categoria"
+        p-required="true"
+        [p-options]="categorias"
+      >
+      </po-select>
+    </div>
+
+    <div class="po-row">
+      <po-decimal
+        class="po-md-4"
+        p-label="Calorias (kcal)"
+        formControlName="calorias"
+        p-required="true"
+        p-placeholder="0"
+        [p-decimals-length]="1"
+        [p-min]="0"
+      >
+      </po-decimal>
+
+      <po-decimal
+        class="po-md-4"
+        p-label="Proteínas (g)"
+        formControlName="proteinas"
+        p-required="true"
+        p-placeholder="0.0"
+        [p-decimals-length]="1"
+        [p-min]="0"
+      >
+      </po-decimal>
+
+      <po-decimal
+        class="po-md-4"
+        p-label="Carboidratos (g)"
+        formControlName="carboidratos"
+        p-required="true"
+        p-placeholder="0.0"
+        [p-decimals-length]="1"
+        [p-min]="0"
+      >
+      </po-decimal>
+    </div>
+
+    <div class="po-row">
+      <po-decimal
+        class="po-md-4"
+        p-label="Gorduras (g)"
+        formControlName="gorduras"
+        p-required="true"
+        p-placeholder="0.0"
+        [p-decimals-length]="1"
+        [p-min]="0"
+      >
+      </po-decimal>
+
+      <po-decimal
+        class="po-md-4"
+        p-label="Fibras (g)"
+        formControlName="fibras"
+        p-required="true"
+        p-placeholder="0.0"
+        [p-decimals-length]="1"
+        [p-min]="0"
+      >
+      </po-decimal>
+    </div>
+  </form>
+</po-modal>
